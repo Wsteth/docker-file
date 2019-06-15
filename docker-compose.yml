@@ -1,0 +1,24 @@
+version: '2'
+services:
+  xampp:
+    image: wsteth/xampp
+    ports: 
+      - "80:80"
+    volumes:
+      - /c/Users/Wstet/Documents/Kitematic/web_workplace/www:/www
+    restart: always
+    container_name: xampp
+    tty: true
+    stdin_open: true
+    
+  code-server:
+    image: codercom/code-server
+    ports: 
+      - "8443:8443"
+    volumes:
+      - /c/Users/Wstet/Documents/Kitematic/web_workplace:/home/coder/project/workplace
+    restart: always
+    container_name: code-server
+    command: --allow-http --no-auth
+    tty: true
+    stdin_open: true
