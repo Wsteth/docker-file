@@ -4,6 +4,8 @@ services:
     image: wsteth/xampp
     ports: 
       - "80:80"
+      - "443"
+      - "3306"
     volumes:
       - /c/Users/Wstet/Documents/Kitematic/web_workplace/www:/www
     restart: always
